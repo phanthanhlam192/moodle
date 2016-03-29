@@ -23,6 +23,8 @@
  */
 
 $string['addmorechoiceblanks'] = 'Blanks for {no} more choices';
+$string['hint'] = 'hints';
+$string['choice'] = 'choices';
 $string['addcategory'] = 'Add category';
 $string['adminreport'] = 'Report on possible problems in your question database.';
 $string['advancedsearchoptions'] = 'Search options';

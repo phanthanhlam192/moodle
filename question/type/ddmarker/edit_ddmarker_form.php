@@ -73,10 +73,9 @@ class qtype_ddmarker_edit_form extends qtype_ddtoimage_edit_form_base {
         $mform->addElement('advcheckbox', 'shuffleanswers', ' ',
                                         get_string('shuffleimages', 'qtype_'.$this->qtype()));
         $mform->setDefault('shuffleanswers', 0);
-        $this->repeat_elements($this->draggable_item($mform), $itemrepeatsatstart,
+        $this->repeat_elements2($this->draggable_item($mform), $itemrepeatsatstart,
                 $this->draggable_items_repeated_options(),
-                'noitems', 'additems', self::ADD_NUM_ITEMS,
-                get_string('addmoreitems', 'qtype_ddmarker'), true);
+                'noitems', 'additems', true, 'moreitem', get_string('item', 'qtype_'.$this->qtype()));
     }
 
     protected function draggable_item($mform) {

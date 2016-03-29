@@ -108,11 +108,9 @@ abstract class qtype_ddtoimage_edit_form_base extends question_edit_form {
             $countdropzones = self::START_NUM_ITEMS;
         }
         $dropzonerepeatsatstart = $countdropzones;
-
-        $this->repeat_elements($this->drop_zone($mform, $imagerepeats), $dropzonerepeatsatstart,
-                $this->drop_zones_repeated_options(),
-                'nodropzone', 'adddropzone', self::ADD_NUM_ITEMS,
-                get_string('addmoredropzones', 'qtype_ddimageortext'), true);
+        $this->repeat_elements2($this->drop_zone($mform, $imagerepeats), $dropzonerepeatsatstart,
+                $this->drop_zones_repeated_options(), 
+                'nodropzone', 'adddropzones', true, 'morezone', get_string('dropzon', 'qtype_'.$this->qtype()));
     }
 
     /**

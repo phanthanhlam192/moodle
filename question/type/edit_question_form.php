@@ -330,10 +330,8 @@ abstract class question_edit_form extends question_wizard_form {
         } else {
             $repeatsatstart = $minoptions;
         }
-
-        $this->repeat_elements($repeated, $repeatsatstart, $repeatedoptions,
-                'noanswers', 'addanswers', $addoptions,
-                $this->get_more_choices_string(), true);
+        $this->repeat_elements2($repeated, $repeatsatstart, $repeatedoptions,
+                'noanswers', 'addanswers', true, 'moreform', get_string('choice', 'question'));
     }
 
     /**
@@ -443,8 +441,8 @@ abstract class question_edit_form extends question_wizard_form {
 
         list($repeated, $repeatedoptions) = $this->get_hint_fields(
                 $withclearwrong, $withshownumpartscorrect);
-        $this->repeat_elements($repeated, $repeatsatstart, $repeatedoptions,
-                'numhints', 'addhint', 1, get_string('addanotherhint', 'question'), true);
+        $this->repeat_elements2($repeated, $repeatsatstart, $repeatedoptions,
+                'numhints', 'addhints', true, 'hintshownumcorrect', get_string('hint', 'question'));
     }
 
     public function set_data($question) {

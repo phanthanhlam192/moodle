@@ -23,6 +23,7 @@
 
 $string['addmoreitems'] = 'Blanks for {no} more markers';
 $string['alttext'] = 'Alt text';
+$string['item'] = 'Items';
 $string['answer'] = 'Answer';
 $string['bgimage'] = 'Background image';
 $string['coords'] = 'Coordinates';

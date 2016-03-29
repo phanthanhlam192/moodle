@@ -157,9 +157,8 @@ class qtype_numerical_edit_form extends question_edit_form {
         } else {
             $repeatsatstart = self::UNITS_MIN_REPEATS;
         }
-
-        $this->repeat_elements($unitfields, $repeatsatstart, $repeatedoptions, 'nounits',
-                'addunits', self::UNITS_TO_ADD, get_string('addmoreunitblanks', 'qtype_numerical', '{no}'), true);
+        $this->repeat_elements2($unitfields, $repeatsatstart, $repeatedoptions, 
+                'nounits', 'addunits', true, 'moreunitfields', get_string('unit', 'qtype_numerical'));
 
         // The following strange-looking if statement is to do with when the
         // form is used to move questions between categories. See MDL-15159.

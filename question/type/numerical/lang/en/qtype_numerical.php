@@ -25,6 +25,7 @@
 
 $string['acceptederror'] = 'Accepted error';
 $string['answererror'] = 'Error';
+$string['units'] = 'units';
 $string['addmoreanswerblanks'] = 'Blanks for {no} more answers';
 $string['addmoreunitblanks'] = 'Blanks for {no} more units';
 $string['answercolon'] = 'Answer:';

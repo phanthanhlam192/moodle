@@ -24,6 +24,8 @@
 
 $string['addmoredropzones'] = 'Blanks for {no} more drop zones';
 $string['addmoreimages'] = 'Blanks for {no} more draggable items';
+$string['dropzon'] = 'dropzones';
+$string['item'] = 'items';
 $string['answer'] = 'Answer';
 $string['bgimage'] = 'Background image';
 $string['correctansweris'] = 'The correct answer is: {$a}';
