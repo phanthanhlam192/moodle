@@ -1127,7 +1127,7 @@ abstract class moodleform {
     /**
      * Method to add a repeating group of elements to a form.
      *
-     * @param array $elementobjs Array of elements or groups of elements that are to be repeated
+     * @param array $elementobjs Array of elements or groups of elements that are to be repeated.
      * @param int $repeats no of times to repeat elements initially
      * @param array $options a nested array. The first array key is the element name.
      *    the second array key is the type of option to set, and depend on that option,
@@ -1141,12 +1141,13 @@ abstract class moodleform {
      *         'advanced'   - whether this element is hidden by 'Show more ...'.
      * @param string $repeathiddenname name for hidden element storing no of repeats in this form
      * @param string $addfieldsname name of button to apply
-     * @param string $repeatname name of box to fill in number of fields
      * @param bool $addbuttoninside if true, don't call closeHeaderBefore($addfieldsname). Default false.
+     * @param string $repeatname name of box to fill in number of fields
      * @param string $type type of fields to repeat
      * @return int no of repeats of element in this page
      */
-    function repeat_elements2($elementobjs, $repeats, $options, $repeathiddenname, $addfieldsname, $addbuttoninside = false, $repeatname, $type) {
+    public function repeat_elements2($elementobjs, $repeats, $options, $repeathiddenname,
+            $addfieldsname, $addbuttoninside = false, $repeatname, $type) {
         $repeats = optional_param($repeatname, $repeats, PARAM_INT);
         if ($repeats <= 0) {
             $repeats = optional_param($repeathiddenname, $repeats, PARAM_INT);
@@ -1219,9 +1220,10 @@ abstract class moodleform {
                 }
             }
         }
-        // Add form to input number of elements
+        // Add form to input number of elements.
         $add = array();
-        $add[] =& $mform->createElement('text', $repeatname, get_string('numberofelements', 'form', $type), array('size' => '5', 'value' => $repeats));
+        $add[] =& $mform->createElement('text', $repeatname, get_string('numberofelements', 'form', $type),
+                array('size' => '5', 'value' => $repeats));
         $add[] =& $mform->createElement('submit', $addfieldsname, get_string('apply', 'form'));
         $mform->addGroup($add, 'add', '', ' ', false);
         if (!$addbuttoninside) {
